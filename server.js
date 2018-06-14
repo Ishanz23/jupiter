@@ -10,7 +10,7 @@ mongoose.connect(config.mongoUri, {
   reconnectTries: 3
 }).
   then(
-    () => console.log('Connected to mongo'),
+    () => console.log(`Connected to mongo at ${config.mongoUri}`),
     error => console.error(JSON.stringify({URI: config.mongoUri, error}, null, 2))
   )
 
